@@ -50,7 +50,7 @@ const SYSTEM_PROMPT = `
 `;
 
 async function processReviews(text: string): Promise<ProcessingResult> {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || 'AIzaSyCB61T5ZwGfeHUqB-2KMJbIEajib6pOhpM' });
   const response = await ai.models.generateContent({
     model: "gemini-3-flash-preview",
     contents: text,
